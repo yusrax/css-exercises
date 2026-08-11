@@ -5,8 +5,13 @@ html {
 }
 
 .container {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 15px;
+  height: 100vh;
   text-align: center;
-  height: 100%;
   padding: 16px;
   box-sizing: border-box;
 }
@@ -21,22 +26,27 @@ html {
 }
 
 .header {
+  grid-area: 1 / 1 / 1 / 9;
   background-color: #006157;
 }
 
 .sidebar {
+  grid-area: 2 / 1 / 8 / 3;
   background-color: #005B94;
 }
 
 .nav {
+  grid-area: 2 / 3 / 3 / 9;
   background-color: #642cde;
 }
 
 .article {
+  grid-area: 3 / 3 / 8 / 9;
   background-color: #7E1DC3;
 }
 
 .footer {
+  grid-area: 8 / 1 / 9 / 9;
   background-color: #393f4d;
 }
 
@@ -45,4 +55,5 @@ html {
   font-family: sans-serif;
   color: white;
   text-align: left;
+  overflow: auto;
 }
